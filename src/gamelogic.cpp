@@ -1,4 +1,4 @@
-#include "gamelogic.h"
+#include "include/gamelogic.h"
 
 std::vector<int> possibleNumbers;
 int randomNumber;

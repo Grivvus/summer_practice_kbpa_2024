@@ -1,7 +1,7 @@
-#include "personanswersgame.h"
+#include "include/personanswersgame.h"
 #include "ui_personanswersgame.h"
 
-#include "gamelogic.h"
+#include "include/gamelogic.h"
 
 PersonAnswersGame::PersonAnswersGame(QWidget *parent)
     : QWidget(parent)
