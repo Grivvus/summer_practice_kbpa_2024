@@ -1,1 +1,1 @@
-summer practice in kbpa after second year in Saratov state technical university
+summer practice in kbpa(industrial automation design bureau) after second year in Saratov state technical university
