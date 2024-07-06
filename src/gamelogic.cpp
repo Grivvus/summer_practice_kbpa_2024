@@ -40,7 +40,7 @@ int gameAlgorithm(int prevNumber, int numOfBulls, int numOfCows){
 void removeImpossibelNumbers(int prevNumber, int numOfBulls, int numOfCows){
     for (auto it = possibleNumbers.begin(); it != possibleNumbers.end(); ) {
         std::pair<int, int> res = countBullsAndCows(*it, prevNumber);
-        if (res.first != numOfBulls && res.second != numOfCows) {
+        if (res.first != numOfBulls || res.second != numOfCows) {
             it = possibleNumbers.erase(it);
         } else if(prevNumber == *it){
             it = possibleNumbers.erase(it);
