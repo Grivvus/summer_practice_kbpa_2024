@@ -9,19 +9,22 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    src/computeranswersgame.cpp \
     src/gamelogic.cpp \
     src/main.cpp \
     src/mainwindow.cpp \
     src/personanswersgame.cpp
 
 HEADERS += \
+    src/include/computeranswersgame.h \
     src/include/mainwindow.h \
     src/include/personanswersgame.h \
     src/include/gamelogic.h
 
 FORMS += \
     mainwindow.ui \
-    personanswersgame.ui
+    personanswersgame.ui \
+    computeranswersgame.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

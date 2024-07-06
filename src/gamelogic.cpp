@@ -39,9 +39,15 @@ int gameAlgorithm(int prevNumber, int numOfBulls, int numOfCows){
 }
 
 void removeImpossibelNumbers(int prevNumber, int numOfBulls, int numOfCows){
-
+    for (auto it = possibleNumbers.begin(); it != possibleNumbers.end(); ) {
+        std::pair<int, int> res = countBullsAndCows(randomNumber, prevNumber);
+        if (res.first != numOfBulls && res.second != numOfCows) {
+            it = possibleNumbers.erase(it);
+        } else {
+            ++it;
+        }
+    }
 }
-
 
 std::pair<int, int> countBullsAndCows(int num1, int num2){
     int numberOfCows = 0;

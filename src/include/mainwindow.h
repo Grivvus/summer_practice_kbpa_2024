@@ -20,6 +20,8 @@ public:
 private slots:
     void on_userAnswersStartGame_clicked();
 
+    void on_compAnswersStartGame_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
