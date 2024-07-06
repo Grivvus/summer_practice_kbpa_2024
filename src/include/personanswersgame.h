@@ -15,6 +15,7 @@ class PersonAnswersGame : public QWidget
 public:
     explicit PersonAnswersGame(QWidget *parent = nullptr);
     ~PersonAnswersGame();
+    int randomNumber;
 
 private slots:
 

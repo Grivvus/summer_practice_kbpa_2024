@@ -1,7 +1,6 @@
 #include "include/gamelogic.h"
 
 std::vector<int> possibleNumbers;
-int randomNumber;
 
 void fillOutVector(){
     for (int i = 0; i <= 9999; i++){
@@ -40,8 +39,10 @@ int gameAlgorithm(int prevNumber, int numOfBulls, int numOfCows){
 
 void removeImpossibelNumbers(int prevNumber, int numOfBulls, int numOfCows){
     for (auto it = possibleNumbers.begin(); it != possibleNumbers.end(); ) {
-        std::pair<int, int> res = countBullsAndCows(randomNumber, prevNumber);
+        std::pair<int, int> res = countBullsAndCows(*it, prevNumber);
         if (res.first != numOfBulls && res.second != numOfCows) {
+            it = possibleNumbers.erase(it);
+        } else if(prevNumber == *it){
             it = possibleNumbers.erase(it);
         } else {
             ++it;
@@ -79,12 +80,12 @@ int generateRandomNumber(void){
 }
 
 
+/*#include <iostream>*/
 /*int main(int argc, char** argv){*/
 /*    fillOutVector();*/
 /*    srand(time(NULL));*/
-/*    std::cout << generateRandomNumber() << "\n" << generateRandomNumber() << "\n";*/
-/*    std::cout << generateRandomNumber() << "\n" << generateRandomNumber() << "\n";*/
-/*    std::cout << generateRandomNumber() << "\n" << generateRandomNumber() << "\n";*/
-/*    std::cout << generateRandomNumber() << "\n" << generateRandomNumber() << "\n";*/
+/*    std::cout << possibleNumbers.size() << "\n";*/
+/*    std::cout << gameAlgorithm(1234, 0, 0) << "\n";*/
+/*    std::cout << possibleNumbers.size() << "\n";*/
 /*    return 0;*/
 /*}*/

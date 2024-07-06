@@ -14,6 +14,7 @@ class ComputerAnswersGame : public QWidget
 public:
     explicit ComputerAnswersGame(QWidget *parent = nullptr);
     ~ComputerAnswersGame();
+    int prevNumber;
 
 private slots:
     void on_sendAnswer_clicked();
